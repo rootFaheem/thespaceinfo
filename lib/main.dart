@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xff16A7F6),
         scaffoldBackgroundColor: Color(0xff0C0C1B),
         bottomAppBarColor: Color(0xff0C0C1B),
+        disabledColor: Color(0xffDA4A55),
+        toggleableActiveColor: Color(0xff33CA4D),
         textTheme: TextTheme(bodyText2: TextStyle(color: Color(0xffFFFFFF))),
 // (new) ThemeData ThemeData({Brightness brightness,
 // VisualDensity visualDensity, MaterialColor primarySwatch,
