@@ -8,8 +8,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'TheSpaceInfo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // brightness: Brightness.dark,
+        primaryColor: Color(0xffFFFFFF),
+        accentColor: Color(0xff16A7F6),
+        textTheme: TextTheme(bodyText2: TextStyle(color: Colors.purple)),
       ),
       home: MyHomePage(title: 'TheSpaceInfo'),
     );
@@ -38,8 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Hello World!',
             ),
+            IconButton(icon: Icon(Icons.add), onPressed: null)
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
       ),
     );
   }
