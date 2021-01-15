@@ -95,35 +95,65 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Missions',
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Missions',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              label: 'Mars',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              label: 'Vehicle',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              label: 'Company',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[800],
+          onTap: _onItemTapped,
+        ),
+        drawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Text('Drawer Header'),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+              ),
+              ListTile(
+                title: Text('Item 1'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Mars',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Vehicle',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Company',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-      ),
-    );
+        ));
   }
 }
