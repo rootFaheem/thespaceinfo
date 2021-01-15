@@ -139,22 +139,36 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               ListTile(
-                
-                title: Text('About Us'),
+                leading: Icon(Icons.info_outlined),
+                title: Text(
+                  'About Us',
+                  textScaleFactor: 1.3,
+                ),
+                subtitle: Text('Know about our app & the author'),
                 onTap: () {
                   // Update the state of the app.
                   // ...
                 },
               ),
               ListTile(
-                title: Text('Contact Us'),
+                leading: Icon(Icons.email_outlined),
+                title: Text(
+                  'Contact Us',
+                  textScaleFactor: 1.3,
+                ),
+                subtitle: Text('Report any bug & help us improve'),
                 onTap: () {
                   // Update the state of the app.
                   // ...
                 },
               ),
               ListTile(
-                title: Text('Invite'),
+                leading: Icon(Icons.group_outlined),
+                title: Text(
+                  'Invite',
+                  textScaleFactor: 1.3,
+                ),
+                subtitle: Text('Invite your friends'),
                 onTap: () {
                   // Update the state of the app.
                   // ...
