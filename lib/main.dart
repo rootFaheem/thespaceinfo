@@ -133,16 +133,27 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
-                child: Text('TheSpaceInfo'),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.add_circle_outline_outlined,
+                    size: 56.0,
+                  ),
+                  title: Text(
+                    'The SpaceInfo',
+                    textScaleFactor: 1.6,
+                  ),
+                  subtitle: Text('Occupy Mars'),
+                  onTap: () {
+                    // Update the state of the app.
+                    // ...
+                  },
                 ),
               ),
               ListTile(
                 leading: Icon(Icons.info_outlined),
                 title: Text(
                   'About Us',
-                  textScaleFactor: 1.3,
+                  textScaleFactor: 1.2,
                 ),
                 subtitle: Text('Know about our app & the author'),
                 onTap: () {
@@ -154,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 leading: Icon(Icons.email_outlined),
                 title: Text(
                   'Contact Us',
-                  textScaleFactor: 1.3,
+                  textScaleFactor: 1.2,
                 ),
                 subtitle: Text('Report any bug & help us improve'),
                 onTap: () {
@@ -166,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 leading: Icon(Icons.group_outlined),
                 title: Text(
                   'Invite',
-                  textScaleFactor: 1.3,
+                  textScaleFactor: 1.2,
                 ),
                 subtitle: Text('Invite your friends'),
                 onTap: () {
