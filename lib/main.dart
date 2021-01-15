@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   title: Text(
                     'The SpaceInfo',
-                    textScaleFactor: 1.6,
+                    style: TextStyle(fontSize: 26.0),
                   ),
                   subtitle: Text('Occupy Mars'),
                   onTap: () {
@@ -148,6 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     // ...
                   },
                 ),
+                decoration:
+                    BoxDecoration(color: Theme.of(context).primaryColor),
               ),
               ListTile(
                 leading: Icon(Icons.info_outlined),
@@ -160,6 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // Update the state of the app.
                   // ...
                 },
+                tileColor: Theme.of(context).primaryColor,
               ),
               ListTile(
                 leading: Icon(Icons.email_outlined),
@@ -185,6 +188,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   // ...
                 },
               ),
+              ListTile(
+                // leading: Icon(Icons.group_outlined)
+                title: Container(
+                  child: Spacer(
+                    flex: 1,
+                  ),
+                ),
+                // subtitle: Text('Invite your friends'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              Text('VERSION 0.0.1'),
             ],
           ),
         ));
