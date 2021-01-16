@@ -103,17 +103,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        showUnselectedLabels: true,
-        selectedLabelStyle:
-            TextStyle(color: Theme.of(context).textTheme.bodyText2.color),
-        unselectedLabelStyle:
-            TextStyle(color: Theme.of(context).textTheme.bodyText2.color),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Missions',
-          ),
+              icon: Icon(Icons.home),
+              label: 'Missions',
+              backgroundColor: Theme.of(context).primaryColor),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Mars',
@@ -128,8 +122,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
+        showUnselectedLabels: true,
+        backgroundColor: Theme.of(context).primaryColor,
+        selectedItemColor: Theme.of(context).textTheme.bodyText2.color,
+        unselectedItemColor: Colors.white30,
       ),
       drawer: AppDrawer(),
     );
