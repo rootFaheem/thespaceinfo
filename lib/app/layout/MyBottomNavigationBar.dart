@@ -1,37 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MyBottomNavigationBar extends StatefulWidget {
-  @override
-  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
-}
+typedef void IntCallback(int id);
 
-class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Mission',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Mars',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Vehicle',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Company',
-      style: optionStyle,
-    ),
-  ];
+class MyBottomNavigationBar extends StatelessWidget {
+  final IntCallback onSonChanged;
+  MyBottomNavigationBar({@required this.onSonChanged});
 
+  final int _selectedIndex = 0;
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    // _selectedIndex = index;
+    onSonChanged(index);
   }
 
   @override

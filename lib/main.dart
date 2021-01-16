@@ -4,7 +4,12 @@ import 'app/layout/MyAppDrawer.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -66,18 +71,51 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
+  int id;
+
+  void updateId(int newId) {
+    setState(() {
+      id = newId;
+    });
+  }
+
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Mission',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Mars',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: Vehicle',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Company',
+      style: optionStyle,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
+    print('id');
+    print(id);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: _widgetOptions.elementAt(id),
       ),
-      bottomNavigationBar: MyBottomNavigationBar(),
+      bottomNavigationBar: MyBottomNavigationBar(
+        onSonChanged: (int newId) {
+          updateId(newId);
+        },
+      ),
       drawer: MyAppDrawer(),
     );
   }
