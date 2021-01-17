@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 
-typedef void IntCallback(int id);
+typedef void IndexChangedCallback(int val);
 
-class MyBottomNavigationBar extends StatelessWidget {
-  final IntCallback onSonChanged;
-  MyBottomNavigationBar({@required this.onSonChanged});
+class MyBottomNavigationBar extends StatefulWidget {
+  final IndexChangedCallback onIndexChangedHandler;
 
-  final int _selectedIndex = 0;
+  MyBottomNavigationBar({this.onIndexChangedHandler});
+
+  @override
+  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
+}
+
+class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+  int _selectedIndex = 0;
   void _onItemTapped(int index) {
-    // _selectedIndex = index;
-    onSonChanged(index);
+    _selectedIndex = index;
+    this.widget.onIndexChangedHandler(index);
   }
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      // type: BottomNavigationBarType.shifting,
+      type: BottomNavigationBarType.shifting,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),

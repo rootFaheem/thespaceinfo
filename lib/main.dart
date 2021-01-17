@@ -71,13 +71,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int id;
+  int _selectedIndex = 0;
 
-  void updateId(int newId) {
-    setState(() {
-      id = newId;
-    });
-  }
+  set index(int value) => setState(() => _selectedIndex = value);
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -102,20 +98,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // print('id');
-    // print(id);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(id),
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: MyBottomNavigationBar(
-        onSonChanged: (int newId) {
-          updateId(newId);
-        },
-      ),
+          onIndexChangedHandler: (val) => setState(() => _selectedIndex = val)),
       drawer: MyAppDrawer(),
     );
   }
