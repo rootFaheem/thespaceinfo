@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Mars extends StatelessWidget {
-  static const routeName = "mars";
+class Vehicles extends StatelessWidget {
+  static const routeName = "vehicles";
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Mars Page'),
+      child: Text('Vehicles Page'),
     );
   }
 }

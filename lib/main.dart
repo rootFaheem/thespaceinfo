@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './app/modules/company/company.dart';
+import './app/modules/vehicles/vehicles.dart';
 import './app/modules/mars/mars.dart';
 import './app/layout//MyAppDrawer.dart';
 import './app/modules/missions/missions.dart';
@@ -82,19 +84,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   set index(int value) => setState(() => _selectedIndex = value);
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     Missions(),
     Mars(),
-    Text(
-      'Index 2: Vehicle',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Company',
-      style: optionStyle,
-    ),
+    Vehicles(),
+    Company(),
   ];
 
   @override
