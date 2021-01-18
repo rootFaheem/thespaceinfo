@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './app/modules/mars/mars.dart';
 import './app/layout//MyAppDrawer.dart';
 import './app/modules/missions/missions.dart';
 import './app/layout/MyBottomNavigationBar.dart';
@@ -85,10 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     Missions(),
-    Text(
-      'Index 1: Mars',
-      style: optionStyle,
-    ),
+    Mars(),
     Text(
       'Index 2: Vehicle',
       style: optionStyle,
