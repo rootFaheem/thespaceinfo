@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Missions extends StatelessWidget {
+class MissionsScreen extends StatelessWidget {
   static const routeName = "missions";
   @override
   Widget build(BuildContext context) {
