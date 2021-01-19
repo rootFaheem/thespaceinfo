@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
       home: MyHomePage(title: 'TheSpaceInfo'),
       initialRoute: '/',
       routes: {
-        MissionsScreen.routeName: (ctx) => MissionsScreen(),
+        MissionScreen.routeName: (ctx) => MissionScreen(),
       },
     );
   }
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
   set index(int value) => setState(() => _selectedIndex = value);
 
   static List<Widget> _widgetOptions = <Widget>[
-    MissionsScreen(),
+    MissionScreen(),
     Mars(),
     Vehicles(),
     Company(),
