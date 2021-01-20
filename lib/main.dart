@@ -101,7 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: MyBottomNavigationBar(
-          onIndexChangedHandler: (val) => setState(() => _selectedIndex = val)),
+        onIndexChangedHandler: (val) => setState(() => _selectedIndex = val),
+      ),
       drawer: MyAppDrawer(),
     );
   }

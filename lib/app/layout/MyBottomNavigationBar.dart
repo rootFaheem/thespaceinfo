@@ -22,6 +22,12 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.shifting,
+      currentIndex: _selectedIndex,
+      onTap: _onItemTapped,
+      showUnselectedLabels: true,
+      backgroundColor: Theme.of(context).primaryColor,
+      selectedItemColor: Theme.of(context).textTheme.bodyText2.color,
+      unselectedItemColor: Colors.white30,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -44,12 +50,6 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           backgroundColor: Theme.of(context).primaryColor,
         ),
       ],
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
-      showUnselectedLabels: true,
-      backgroundColor: Theme.of(context).primaryColor,
-      selectedItemColor: Theme.of(context).textTheme.bodyText2.color,
-      unselectedItemColor: Colors.white30,
     );
   }
 }
