@@ -7,13 +7,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      // bottom: TabBar(
-      //   tabs: [
-      //     Tab(icon: Icon(Icons.directions_car)),
-      //     Tab(icon: Icon(Icons.directions_transit)),
-      //     Tab(icon: Icon(Icons.directions_bike)),
-      //   ],
-      // ),
       title: Text(title),
     );
   }
