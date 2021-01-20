@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './app/layout/MyAppBar.dart';
 import './app/modules/company/company.dart';
 import './app/modules/vehicles/vehicles.dart';
 import './app/modules/mars/mars.dart';
@@ -94,9 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: MyAppBar(title: widget.title),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
