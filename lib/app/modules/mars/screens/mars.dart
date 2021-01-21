@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/mars_details.dart';
 
 class Mars extends StatelessWidget {
   static const routeName = "mars";
@@ -38,6 +39,7 @@ class Mars extends StatelessWidget {
             ],
           ),
         ),
+        MarsDetails(),
       ],
     );
   }
