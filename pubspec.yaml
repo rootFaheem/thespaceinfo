@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   provider: ^4.3.3
   http: ^0.12.2
+  sliding_up_panel: ^1.0.2
 
 
 
