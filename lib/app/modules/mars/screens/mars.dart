@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import '../widgets/mars_details.dart';
 
-class Mars extends StatelessWidget {
+class Mars extends StatefulWidget {
   static const routeName = "mars";
 
+  @override
+  _MarsState createState() => _MarsState();
+}
+
+class _MarsState extends State<Mars> {
   @override
   Widget build(BuildContext context) {
     return Column(
