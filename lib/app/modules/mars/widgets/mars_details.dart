@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MarsDetails extends StatefulWidget {
-
   @override
   _NestedTabBarState createState() => _NestedTabBarState();
 }
@@ -14,7 +13,7 @@ class _NestedTabBarState extends State<MarsDetails>
   void initState() {
     super.initState();
 
-    _nestedTabController = new TabController(length: 5, vsync: this);
+    _nestedTabController = new TabController(length: 4, vsync: this);
   }
 
   @override
@@ -36,21 +35,10 @@ class _NestedTabBarState extends State<MarsDetails>
           unselectedLabelColor: Colors.white70,
           isScrollable: true,
           tabs: <Widget>[
-            Tab(
-              text: "One",
-            ),
-            Tab(
-              text: "Two",
-            ),
-            Tab(
-              text: "Three",
-            ),
-            Tab(
-              text: "Four",
-            ),
-            Tab(
-              text: "Five",
-            ),
+            Tab(text: "Overview"),
+            Tab(text: "Fun Facts"),
+            Tab(text: "Perseverance Rover"),
+            Tab(text: "Gallery"),
           ],
         ),
         Container(
@@ -60,33 +48,38 @@ class _NestedTabBarState extends State<MarsDetails>
             controller: _nestedTabController,
             children: <Widget>[
               Container(
+                margin: EdgeInsets.only(top: 20.0),
+                padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.blueAccent,
                 ),
+                child: SingleChildScrollView(
+                  child: Text('Overview goes here...'),
+                ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 20.0),
+                padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.orangeAccent,
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 20.0),
+                padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.greenAccent,
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 20.0),
+                padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   color: Colors.indigoAccent,
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.redAccent,
                 ),
               ),
             ],
