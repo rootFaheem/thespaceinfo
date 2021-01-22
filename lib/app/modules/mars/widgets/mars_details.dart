@@ -44,7 +44,7 @@ class _NestedTabBarState extends State<MarsDetails>
             ],
           ),
           Container(
-            height: screenHeight * 0.35,
+            height: screenHeight * 0.30,
             margin: EdgeInsets.only(left: 16.0, right: 16.0),
             child: TabBarView(
               controller: _nestedTabController,
