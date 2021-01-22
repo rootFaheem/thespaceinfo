@@ -27,8 +27,12 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: Color(0xff0C0C1B),
         bottomAppBarColor: Color(0xff0C0C1B),
         disabledColor: Color(0xffDA4A55),
+        backgroundColor: Color(0xff262E41),
         toggleableActiveColor: Color(0xff33CA4D),
-        textTheme: TextTheme(bodyText2: TextStyle(color: Color(0xffFFFFFF))),
+        textTheme: TextTheme(
+          bodyText1: TextStyle(color: Color(0xffFFFFFF)),
+          bodyText2: TextStyle(color: Color(0xffFFFFFF)),
+        ),
 // (new) ThemeData ThemeData({Brightness brightness,
 // VisualDensity visualDensity, MaterialColor primarySwatch,
 // Color primaryColor, Brightness primaryColorBrightness, Color primaryColorLight,

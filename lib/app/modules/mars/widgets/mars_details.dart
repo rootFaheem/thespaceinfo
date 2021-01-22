@@ -25,67 +25,70 @@ class _NestedTabBarState extends State<MarsDetails>
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        TabBar(
-          controller: _nestedTabController,
-          indicatorColor: Colors.white,
-          labelColor: Colors.white,
-          unselectedLabelColor: Colors.white70,
-          isScrollable: true,
-          tabs: <Widget>[
-            Tab(text: "Overview"),
-            Tab(text: "Fun Facts"),
-            Tab(text: "Perseverance Rover"),
-            Tab(text: "Gallery"),
-          ],
-        ),
-        Container(
-          height: screenHeight * 0.35,
-          margin: EdgeInsets.only(left: 16.0, right: 16.0),
-          child: TabBarView(
+    return Container(
+      color: Theme.of(context).backgroundColor,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          TabBar(
             controller: _nestedTabController,
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.only(top: 20.0),
-                padding: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.blueAccent,
-                ),
-                child: SingleChildScrollView(
-                  child: Text('Overview goes here...'),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 20.0),
-                padding: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.orangeAccent,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 20.0),
-                padding: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.greenAccent,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 20.0),
-                padding: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.indigoAccent,
-                ),
-              ),
+            indicatorColor: Theme.of(context).accentColor,
+            labelColor: Theme.of(context).textTheme.bodyText1.color,
+            unselectedLabelColor: Colors.white70,
+            isScrollable: true,
+            tabs: <Widget>[
+              Tab(text: "Overview"),
+              Tab(text: "Fun Facts"),
+              Tab(text: "Perseverance Rover"),
+              Tab(text: "Gallery"),
             ],
           ),
-        )
-      ],
+          Container(
+            height: screenHeight * 0.35,
+            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: TabBarView(
+              controller: _nestedTabController,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                  child: SingleChildScrollView(
+                    child: Text('Overview goes here...'),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
