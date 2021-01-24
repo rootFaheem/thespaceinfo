@@ -4,8 +4,19 @@ class Vehicles extends StatelessWidget {
   static const routeName = "vehicles";
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Vehicles Page'),
+    return GridView.count(
+      // Create a grid with 2 columns. If you change the scrollDirection to
+      // horizontal, this produces 2 rows.
+      crossAxisCount: 2,
+      // Generate 100 widgets that display their index in the List.
+      children: List.generate(6, (index) {
+        return Center(
+          child: Text(
+            'Item $index',
+            style: Theme.of(context).textTheme.headline5,
+          ),
+        );
+      }),
     );
   }
 }
