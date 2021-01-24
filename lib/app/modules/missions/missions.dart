@@ -25,7 +25,7 @@ class _NestedTabBarState extends State<MissionScreen>
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
+    // double screenHeight = MediaQuery.of(context).size.height;
     return Container(
       color: Theme.of(context).backgroundColor,
       child: Column(
