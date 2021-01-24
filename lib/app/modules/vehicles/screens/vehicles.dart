@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/VehicleCard.dart';
 
 class Vehicles extends StatelessWidget {
   static const routeName = "vehicles";
@@ -11,10 +12,7 @@ class Vehicles extends StatelessWidget {
       // Generate 100 widgets that display their index in the List.
       children: List.generate(6, (index) {
         return Center(
-          child: Text(
-            'Item $index',
-            style: Theme.of(context).textTheme.headline5,
-          ),
+          child: VehicleCard(title: '$index'),
         );
       }),
     );
