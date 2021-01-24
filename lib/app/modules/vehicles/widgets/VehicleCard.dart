@@ -8,18 +8,23 @@ class VehicleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.blue,
+      clipBehavior: Clip.none,
+      shadowColor: Colors.black,
+      color: Theme.of(context).backgroundColor,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ListTile(
             contentPadding: EdgeInsets.only(
-              top: 20.0,
+              top: 10.0,
             ),
-            leading: Image.asset('assets/images/temp/vehicle.png'),
+            leading: Image.asset(
+              'assets/images/temp/dragon.png',
+              color: Colors.blue,
+            ),
             title: Image.asset(
               'assets/images/temp/dragon.png',
-              height: 62.0,
+              height: 48.0,
             ),
             // subtitle: ,
           ),

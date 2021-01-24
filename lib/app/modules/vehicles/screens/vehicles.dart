@@ -3,16 +3,25 @@ import '../widgets/VehicleCard.dart';
 
 class Vehicles extends StatelessWidget {
   static const routeName = "vehicles";
+
+  static final myVehicles = [
+    {"id": 0, "title": "Rockets"},
+    {"id": 1, "title": "Dragons"},
+    {"id": 2, "title": "Capsules"},
+    {"id": 3, "title": "Cores"},
+    {"id": 4, "title": "Payloads"},
+    {"id": 5, "title": "Roadster"},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      // Create a grid with 2 columns. If you change the scrollDirection to
-      // horizontal, this produces 2 rows.
       crossAxisCount: 2,
-      // Generate 100 widgets that display their index in the List.
+      padding: EdgeInsets.all(14.0),
+      crossAxisSpacing: 12.0,
       children: List.generate(6, (index) {
         return Center(
-          child: VehicleCard(title: '$index'),
+          child: VehicleCard(title: myVehicles[index]['title'].toString()),
         );
       }),
     );
