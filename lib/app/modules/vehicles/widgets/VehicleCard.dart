@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thespaceinfo/app/modules/vehicles/screens/rocket_screen.dart';
 
 class VehicleCard extends StatelessWidget {
   final String title;
@@ -11,7 +10,7 @@ class VehicleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushNamed(RocketScreen.routeName);
+        Navigator.of(context).pushNamed(routeName);
       },
       child: Card(
         clipBehavior: Clip.none,

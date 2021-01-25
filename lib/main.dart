@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-import './app/modules/vehicles/screens/rocket_screen.dart';
 import './app/layout/MyAppBar.dart';
 import './app/modules/company/company.dart';
-import 'app/modules/vehicles/screens/vehicles.dart';
+import 'app/modules/vehicles/vehicles.dart';
 import 'app/modules/mars/screens/mars.dart';
 import './app/layout//MyAppDrawer.dart';
 import './app/modules/missions/missions.dart';
 import './app/layout/MyBottomNavigationBar.dart';
+
+import './app/modules/vehicles/screens/rocket_screen.dart';
+import './app/modules/vehicles/screens/dragon_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -74,6 +76,7 @@ class _MyAppState extends State<MyApp> {
         '/': (ctx) => MyHomePage(title: 'TheSpaceInfo'),
         MissionScreen.routeName: (ctx) => MissionScreen(),
         RocketScreen.routeName: (ctx) => RocketScreen(),
+        DragonScreen.routeName: (ctx) => DragonScreen(),
       },
     );
   }
