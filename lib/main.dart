@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import './app/modules/vehicles/provider/rocket.dart';
 import './app/layout/MyAppBar.dart';
 import './app/modules/company/company.dart';
 import 'app/modules/vehicles/vehicles.dart';
@@ -25,21 +27,25 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'TheSpaceInfo',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Color(0xff0C0C1B),
-        accentColor: Color(0xff16A7F6),
-        scaffoldBackgroundColor: Color(0xff0C0C1B),
-        bottomAppBarColor: Color(0xff0C0C1B),
-        disabledColor: Color(0xffDA4A55),
-        backgroundColor: Color(0xff262E41),
-        toggleableActiveColor: Color(0xff33CA4D),
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Color(0xffFFFFFF)),
-          bodyText2: TextStyle(color: Color(0xffFFFFFF)),
-        ),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(value: Rocket()),
+      ],
+      child: MaterialApp(
+        title: 'TheSpaceInfo',
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          primaryColor: Color(0xff0C0C1B),
+          accentColor: Color(0xff16A7F6),
+          scaffoldBackgroundColor: Color(0xff0C0C1B),
+          bottomAppBarColor: Color(0xff0C0C1B),
+          disabledColor: Color(0xffDA4A55),
+          backgroundColor: Color(0xff262E41),
+          toggleableActiveColor: Color(0xff33CA4D),
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: Color(0xffFFFFFF)),
+            bodyText2: TextStyle(color: Color(0xffFFFFFF)),
+          ),
 // (new) ThemeData ThemeData({Brightness brightness,
 // VisualDensity visualDensity, MaterialColor primarySwatch,
 // Color primaryColor, Brightness primaryColorBrightness, Color primaryColorLight,
@@ -73,19 +79,20 @@ class _MyAppState extends State<MyApp> {
 // OutlinedButtonThemeData outlinedButtonTheme, TextSelectionThemeData textSelectionTheme,
 // DataTableThemeData dataTableTheme, bool fixTextFieldOutlineLabel,
 // bool useTextSelectionTheme})
+        ),
+        // home: MyHomePage(title: 'TheSpaceInfo'),
+        initialRoute: '/',
+        routes: {
+          '/': (ctx) => MyHomePage(title: 'TheSpaceInfo'),
+          MissionScreen.routeName: (ctx) => MissionScreen(),
+          RocketScreen.routeName: (ctx) => RocketScreen(),
+          DragonScreen.routeName: (ctx) => DragonScreen(),
+          CapsuleScreen.routeName: (ctx) => CapsuleScreen(),
+          CoreScreen.routeName: (ctx) => CoreScreen(),
+          PayloadScreen.routeName: (ctx) => PayloadScreen(),
+          RoadsterScreen.routeName: (ctx) => RoadsterScreen(),
+        },
       ),
-      // home: MyHomePage(title: 'TheSpaceInfo'),
-      initialRoute: '/',
-      routes: {
-        '/': (ctx) => MyHomePage(title: 'TheSpaceInfo'),
-        MissionScreen.routeName: (ctx) => MissionScreen(),
-        RocketScreen.routeName: (ctx) => RocketScreen(),
-        DragonScreen.routeName: (ctx) => DragonScreen(),
-        CapsuleScreen.routeName: (ctx) => CapsuleScreen(),
-        CoreScreen.routeName: (ctx) => CoreScreen(),
-        PayloadScreen.routeName: (ctx) => PayloadScreen(),
-        RoadsterScreen.routeName: (ctx) => RoadsterScreen(),
-      },
     );
   }
 }
