@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/rocket_screen.dart';
 import 'screens/dragon_screen.dart';
+import 'screens/capsule_screen.dart';
 
 import 'widgets/VehicleCard.dart';
 
@@ -11,7 +12,7 @@ class Vehicles extends StatelessWidget {
   static final myVehicles = [
     {"id": 0, "title": "Rockets", "routeName": RocketScreen.routeName},
     {"id": 1, "title": "Dragons", "routeName": DragonScreen.routeName},
-    {"id": 2, "title": "Capsules", "routeName": RocketScreen.routeName},
+    {"id": 2, "title": "Capsules", "routeName": CapsuleScreen.routeName},
     {"id": 3, "title": "Cores", "routeName": RocketScreen.routeName},
     {"id": 4, "title": "Payloads", "routeName": RocketScreen.routeName},
     {"id": 5, "title": "Roadster", "routeName": RocketScreen.routeName},
