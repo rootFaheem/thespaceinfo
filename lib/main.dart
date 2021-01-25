@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './app/modules/vehicles/screens/rocket_screen.dart';
 import './app/layout/MyAppBar.dart';
 import './app/modules/company/company.dart';
 import 'app/modules/vehicles/screens/vehicles.dart';
@@ -67,10 +68,12 @@ class _MyAppState extends State<MyApp> {
 // DataTableThemeData dataTableTheme, bool fixTextFieldOutlineLabel,
 // bool useTextSelectionTheme})
       ),
-      home: MyHomePage(title: 'TheSpaceInfo'),
+      // home: MyHomePage(title: 'TheSpaceInfo'),
       initialRoute: '/',
       routes: {
+        '/': (ctx) => MyHomePage(title: 'TheSpaceInfo'),
         MissionScreen.routeName: (ctx) => MissionScreen(),
+        RocketScreen.routeName: (ctx) => RocketScreen(),
       },
     );
   }

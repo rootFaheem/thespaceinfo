@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import './rocket_screen.dart';
 import '../widgets/VehicleCard.dart';
 
 class Vehicles extends StatelessWidget {
-  static const routeName = "vehicles";
+  static const routeName = "/vehicles";
 
   static final myVehicles = [
-    {"id": 0, "title": "Rockets"},
-    {"id": 1, "title": "Dragons"},
-    {"id": 2, "title": "Capsules"},
-    {"id": 3, "title": "Cores"},
-    {"id": 4, "title": "Payloads"},
-    {"id": 5, "title": "Roadster"},
+    {"id": 0, "title": "Rockets", "routeName": RocketScreen.routeName},
+    {"id": 1, "title": "Dragons", "routeName": RocketScreen.routeName},
+    {"id": 2, "title": "Capsules", "routeName": RocketScreen.routeName},
+    {"id": 3, "title": "Cores", "routeName": RocketScreen.routeName},
+    {"id": 4, "title": "Payloads", "routeName": RocketScreen.routeName},
+    {"id": 5, "title": "Roadster", "routeName": RocketScreen.routeName},
   ];
 
   @override
@@ -21,7 +22,9 @@ class Vehicles extends StatelessWidget {
       crossAxisSpacing: 12.0,
       children: List.generate(6, (index) {
         return Center(
-          child: VehicleCard(title: myVehicles[index]['title'].toString()),
+          child: VehicleCard(
+              title: myVehicles[index]['title'].toString(),
+              routeName: myVehicles[index]['routeName']),
         );
       }),
     );

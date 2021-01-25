@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RocketScreen extends StatelessWidget {
+  static const routeName = "/rockets";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
