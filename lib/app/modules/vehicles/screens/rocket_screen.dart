@@ -36,59 +36,72 @@ class RocketScreen extends StatelessWidget {
                     },
                     child: Card(
                       shadowColor: Colors.grey[800],
-                      color: Colors.black,
+                      color: Theme.of(context).backgroundColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                       elevation: 8.0,
-                      child: ListTile(
-                        leading: Image.network(
-                          rocketData.allRockets[i].images[0],
-                          fit: BoxFit.contain,
-                        ),
-                        title: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text('SpaceX'),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text(rocketData.allRockets[i].name),
-                              ],
-                            ),
-                          ],
-                        ),
+                      child: Container(
+                        padding: EdgeInsets.all(16.0),
+                        child: ListTile(
+                          leading: Image.network(
+                            rocketData.allRockets[i].images[0],
+                            fit: BoxFit.fill,
+                          ),
+                          title: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/images/temp/spacex.png',
+                                    width: 75.0,
+                                    height: 18.0,
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    rocketData.allRockets[i].name,
+                                    style: TextStyle(fontSize: 20.0),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 9.0),
+                            ],
+                          ),
 
-                        subtitle: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text('Status'),
-                                Text('Cost per Launch'),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  rocketData.allRockets[i].status
-                                      ? "Active"
-                                      : "Inactive",
-                                ),
-                                Text(
-                                  rocketData.allRockets[i].costPerLaunch
-                                      .toString(),
-                                ),
-                              ],
-                            ),
-                          ],
+                          subtitle: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text('Status'),
+                                  Text('Cost per Launch'),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    rocketData.allRockets[i].status
+                                        ? "Active"
+                                        : "Inactive",
+                                  ),
+                                  Text(
+                                    rocketData.allRockets[i].costPerLaunch
+                                        .toString(),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          // trailing: Text('Rockets'),
                         ),
-                        // trailing: Text('Rockets'),
                       ),
                     ),
                   ),
