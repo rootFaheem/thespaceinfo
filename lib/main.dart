@@ -11,6 +11,7 @@ import './app/layout/MyBottomNavigationBar.dart';
 import './app/modules/vehicles/screens/rocket_screen.dart';
 import './app/modules/vehicles/screens/dragon_screen.dart';
 import './app/modules/vehicles/screens/capsule_screen.dart';
+import './app/modules/vehicles/screens/core_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -79,6 +80,7 @@ class _MyAppState extends State<MyApp> {
         RocketScreen.routeName: (ctx) => RocketScreen(),
         DragonScreen.routeName: (ctx) => DragonScreen(),
         CapsuleScreen.routeName: (ctx) => CapsuleScreen(),
+        CoreScreen.routeName: (ctx) => CoreScreen(),
       },
     );
   }
