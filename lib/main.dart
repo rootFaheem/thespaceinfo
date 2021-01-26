@@ -16,6 +16,7 @@ import './app/modules/vehicles/screens/capsule_screen.dart';
 import './app/modules/vehicles/screens/core_screen.dart';
 import './app/modules/vehicles/screens/payload_screen.dart';
 import './app/modules/vehicles/screens/roadster_screen.dart';
+import './app/modules/vehicles/screens/detailed_screens/rocket_detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -91,6 +92,7 @@ class _MyAppState extends State<MyApp> {
           CoreScreen.routeName: (ctx) => CoreScreen(),
           PayloadScreen.routeName: (ctx) => PayloadScreen(),
           RoadsterScreen.routeName: (ctx) => RoadsterScreen(),
+          RocketDetailScreen.routeName: (ctx) => RocketDetailScreen(),
         },
       ),
     );
