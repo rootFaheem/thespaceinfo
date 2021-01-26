@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import './detailed_screens/rocket_detail_screen.dart';
 import '../provider/rocket.dart';
 
 class RocketScreen extends StatelessWidget {
@@ -30,9 +31,9 @@ class RocketScreen extends StatelessWidget {
                   itemBuilder: (ctx, i) => InkWell(
                     highlightColor: Colors.transparent,
                     onTap: () => {
-                      // Navigator.of(context).pushNamed(
-                      //     RocketDetailsScreen.routeName,
-                      //     arguments: rocketData.allRockets[i].id),
+                      Navigator.of(context).pushNamed(
+                          RocketDetailScreen.routeName,
+                          arguments: rocketData.allRockets[i].id),
                     },
                     child: Card(
                       shadowColor: Colors.grey[800],
