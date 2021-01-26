@@ -28,33 +28,6 @@ class RocketDetailScreen extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Image.network(item, fit: BoxFit.cover, width: 1000.0),
-                        Positioned(
-                          bottom: 0.0,
-                          left: 0.0,
-                          right: 0.0,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  Color.fromARGB(200, 0, 0, 0),
-                                  Color.fromARGB(0, 0, 0, 0)
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                              ),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 20.0),
-                            child: Text(
-                              'No. ${rocketDetails.images.indexOf(item)} image',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
                       ],
                     )),
               ),
@@ -75,13 +48,17 @@ class RocketDetailScreen extends StatelessWidget {
               carouselController: _controller,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 ...Iterable<int>.generate(rocketDetails.images.length).map(
                   (int pageIndex) => Flexible(
                     child: InkWell(
                       onTap: () => _controller.animateToPage(pageIndex),
-                      child: Image.network(rocketDetails.images[pageIndex]),
+                      child: Image.network(
+                        rocketDetails.images[pageIndex],
+                        fit: BoxFit.cover, 
+                        width: 92.0,
+                      ),
                     ),
                   ),
                 ),
