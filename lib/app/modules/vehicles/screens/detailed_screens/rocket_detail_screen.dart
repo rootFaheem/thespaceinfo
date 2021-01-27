@@ -56,14 +56,17 @@ class RocketDetailScreen extends StatelessWidget {
                       onTap: () => _controller.animateToPage(pageIndex),
                       child: Image.network(
                         rocketDetails.images[pageIndex],
-                        fit: BoxFit.cover, 
+                        fit: BoxFit.cover,
                         width: 92.0,
                       ),
                     ),
                   ),
                 ),
               ],
-            )
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[Text(rocketDetails.name)]),
           ],
         ),
       ),
