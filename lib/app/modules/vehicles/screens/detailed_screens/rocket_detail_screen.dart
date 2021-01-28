@@ -65,8 +65,13 @@ class RocketDetailScreen extends StatelessWidget {
               ],
             ),
             Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[Text(rocketDetails.name)]),
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[Text(rocketDetails.name)],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[Text(rocketDetails.company)],
+            ),
           ],
         ),
       ),
