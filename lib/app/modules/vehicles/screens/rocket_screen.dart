@@ -88,16 +88,40 @@ class RocketScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    rocketData.allRockets[i].status
-                                        ? "Active"
-                                        : "Inactive",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText1
-                                          .color,
-                                    ),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(right: 4.0),
+                                        height: 8.0,
+                                        width: 8.0,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                            color:
+                                                rocketData.allRockets[i].status
+                                                    ? Colors.green
+                                                    : Colors.red,
+                                          ),
+                                          color: rocketData.allRockets[i].status
+                                              ? Colors.green
+                                              : Colors.red,
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(20),
+                                          ),
+                                        ),
+                                        // child: ...
+                                      ),
+                                      Text(
+                                        rocketData.allRockets[i].status
+                                            ? "Active"
+                                            : "Inactive",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1
+                                              .color,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                   Text(
                                     rocketData.allRockets[i].costPerLaunch
