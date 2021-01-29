@@ -7,7 +7,7 @@ import 'screens/core_screen.dart';
 import 'screens/payload_screen.dart';
 import 'screens/roadster_screen.dart';
 
-import 'widgets/VehicleCard.dart';
+import 'widgets/vehicle_card.dart';
 
 class Vehicles extends StatelessWidget {
   static const routeName = "/vehicles";

@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../widgets/rocket_tabs_details.dart';
 
 import '../../provider/rocket.dart';
 
@@ -72,6 +73,7 @@ class RocketDetailScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[Text(rocketDetails.company)],
             ),
+            RocketTabsDetails(),
           ],
         ),
       ),
