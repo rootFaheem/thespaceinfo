@@ -74,14 +74,23 @@ class RocketScreen extends StatelessWidget {
 
                           subtitle: Column(
                             children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text('Status'),
-                                  Text('Cost per Launch'),
-                                ],
+                              Container(
+                                margin: EdgeInsets.only(bottom: 4.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Status',
+                                      style: TextStyle(fontSize: 12.0),
+                                    ),
+                                    Text(
+                                      'Cost per Launch',
+                                      style: TextStyle(fontSize: 12.0),
+                                    ),
+                                  ],
+                                ),
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -115,11 +124,11 @@ class RocketScreen extends StatelessWidget {
                                             ? "Active"
                                             : "Inactive",
                                         style: TextStyle(
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1
-                                              .color,
-                                        ),
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText1
+                                                .color,
+                                            fontSize: 14.0),
                                       ),
                                     ],
                                   ),
@@ -127,11 +136,11 @@ class RocketScreen extends StatelessWidget {
                                     rocketData.allRockets[i].costPerLaunch
                                         .toString(),
                                     style: TextStyle(
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText1
-                                          .color,
-                                    ),
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1
+                                            .color,
+                                        fontSize: 14.0),
                                   ),
                                 ],
                               ),
