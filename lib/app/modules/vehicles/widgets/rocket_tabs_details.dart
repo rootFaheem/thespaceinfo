@@ -25,93 +25,70 @@ class _NestedTabBarState extends State<RocketTabsDetails>
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    return ElevatedButton(
-        child: const Text('showBottomSheet'),
-        onPressed: () {
-          Scaffold.of(context).showBottomSheet<void>((BuildContext context) {
-            return Container(
-              height: 200,
-              color: Colors.amber,
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    const Text('BottomSheet'),
-                    ElevatedButton(
-                      child: const Text('Close BottomSheet'),
-                      onPressed: () => Navigator.pop(context),
-                    )
-                  ],
+    return Container(
+      color: Theme.of(context).backgroundColor,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          TabBar(
+            controller: _nestedTabController,
+            indicatorColor: Theme.of(context).accentColor,
+            labelColor: Theme.of(context).textTheme.bodyText1.color,
+            unselectedLabelColor: Colors.white70,
+            isScrollable: true,
+            tabs: <Widget>[
+              Tab(text: "Overview"),
+              Tab(text: "Measurements"),
+              Tab(text: "Stages"),
+              Tab(text: "Engine Details"),
+            ],
+          ),
+          Container(
+            height: screenHeight * 0.40,
+            // margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: TabBarView(
+              controller: _nestedTabController,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                  child: SingleChildScrollView(
+                    child: Text('Overview goes here...'),
+                  ),
                 ),
-              ),
-            );
-          });
-        });
-    // Container(
-    //   color: Theme.of(context).backgroundColor,
-    //   child: Column(
-    //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-    //     children: <Widget>[
-    //       TabBar(
-    //         controller: _nestedTabController,
-    //         indicatorColor: Theme.of(context).accentColor,
-    //         labelColor: Theme.of(context).textTheme.bodyText1.color,
-    //         unselectedLabelColor: Colors.white70,
-    //         isScrollable: true,
-    //         tabs: <Widget>[
-    //           Tab(text: "Overview"),
-    //           Tab(text: "Measurements"),
-    //           Tab(text: "Stages"),
-    //           Tab(text: "Engine Details"),
-    //         ],
-    //       ),
-    //       Container(
-    //         height: screenHeight * 0.40,
-    //         // margin: EdgeInsets.only(left: 16.0, right: 16.0),
-    //         child: TabBarView(
-    //           controller: _nestedTabController,
-    //           children: <Widget>[
-    //             Container(
-    //               margin: EdgeInsets.only(top: 20.0),
-    //               padding: EdgeInsets.all(10.0),
-    //               decoration: BoxDecoration(
-    //                 borderRadius: BorderRadius.circular(8.0),
-    //                 color: Theme.of(context).backgroundColor,
-    //               ),
-    //               child: SingleChildScrollView(
-    //                 child: Text('Overview goes here...'),
-    //               ),
-    //             ),
-    //             Container(
-    //               margin: EdgeInsets.only(top: 20.0),
-    //               padding: EdgeInsets.all(10.0),
-    //               decoration: BoxDecoration(
-    //                 borderRadius: BorderRadius.circular(8.0),
-    //                 color: Theme.of(context).backgroundColor,
-    //               ),
-    //             ),
-    //             Container(
-    //               margin: EdgeInsets.only(top: 20.0),
-    //               padding: EdgeInsets.all(10.0),
-    //               decoration: BoxDecoration(
-    //                 borderRadius: BorderRadius.circular(8.0),
-    //                 color: Theme.of(context).backgroundColor,
-    //               ),
-    //             ),
-    //             Container(
-    //               margin: EdgeInsets.only(top: 20.0),
-    //               padding: EdgeInsets.all(10.0),
-    //               decoration: BoxDecoration(
-    //                 borderRadius: BorderRadius.circular(8.0),
-    //                 color: Theme.of(context).backgroundColor,
-    //               ),
-    //             ),
-    //           ],
-    //         ),
-    //       )
-    //     ],
-    //   ),
-    // );
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Theme.of(context).backgroundColor,
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
