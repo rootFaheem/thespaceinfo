@@ -25,8 +25,8 @@ class _NestedTabBarState extends State<RocketTabsDetails>
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    return Container(
-      color: Theme.of(context).backgroundColor,
+    return SingleChildScrollView(
+      // color: Theme.of(context).backgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -44,7 +44,7 @@ class _NestedTabBarState extends State<RocketTabsDetails>
             ],
           ),
           Container(
-            height: screenHeight * 0.40,
+            height: screenHeight * 0.80,
             // margin: EdgeInsets.only(left: 16.0, right: 16.0),
             child: TabBarView(
               controller: _nestedTabController,
