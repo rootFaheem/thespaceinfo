@@ -30,14 +30,14 @@ class _NestedTabBarState extends State<MissionScreen>
       child: Container(
         color: Theme.of(context).backgroundColor,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             TabBar(
               controller: _nestedTabController,
               indicatorColor: Theme.of(context).accentColor,
               labelColor: Theme.of(context).textTheme.bodyText1.color,
               unselectedLabelColor: Colors.white70,
-              isScrollable: true,
+              isScrollable: false,
               tabs: <Widget>[
                 Tab(text: "Upcoming"),
                 Tab(text: "Recent"),
