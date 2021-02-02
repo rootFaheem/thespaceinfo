@@ -31,6 +31,13 @@ class _NestedTabBarState extends State<RocketTabsDetails>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            Container(
+              color: Colors.blue,
+              child: SizedBox(
+                height: 4.0,
+                width: 74.0,
+              ),
+            ),
             TabBar(
               controller: _nestedTabController,
               indicatorColor: Theme.of(context).accentColor,
