@@ -34,10 +34,7 @@ class _NestedTabBarState extends State<RocketTabsDetails>
             Container(
               margin: EdgeInsets.only(top: 16.0, bottom: 16.0),
               color: Color(0xffC4C4C4),
-              child: SizedBox(
-                height: 4.0,
-                width: 74.0,
-              ),
+              child: SizedBox(height: 4.0, width: 74.0),
             ),
             TabBar(
               controller: _nestedTabController,
