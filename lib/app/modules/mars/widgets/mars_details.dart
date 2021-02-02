@@ -41,6 +41,7 @@ class _NestedTabBarState extends State<MarsDetails>
             labelColor: Theme.of(context).textTheme.bodyText1.color,
             unselectedLabelColor: Colors.white70,
             isScrollable: true,
+            indicatorWeight: 2.0,
             tabs: <Widget>[
               Tab(text: "Overview"),
               Tab(text: "Fun Facts"),
