@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/mars_overview.dart';
 import '../widgets/mars_funfacts.dart';
 import '../widgets/mars_perseverance_rover.dart';
+import '../widgets/mars_gallery.dart';
 
 class Mars extends StatefulWidget {
   static const routeName = "mars";
@@ -97,14 +98,7 @@ class _MarsState extends State<Mars> with TickerProviderStateMixin {
                       MarsOverview(),
                       MarsFunFact(),
                       MarsPerseveranceRover(),
-                      Container(
-                        margin: EdgeInsets.only(top: 20.0),
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          color: Theme.of(context).backgroundColor,
-                        ),
-                      ),
+                      MarsGallery(),
                     ],
                   ),
                 )
