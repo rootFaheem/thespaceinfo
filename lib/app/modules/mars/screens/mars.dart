@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/mars_overview.dart';
 
 class Mars extends StatefulWidget {
   static const routeName = "mars";
@@ -98,9 +99,7 @@ class _MarsState extends State<Mars> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(8.0),
                           color: Theme.of(context).backgroundColor,
                         ),
-                        child: SingleChildScrollView(
-                          child: Text('Overview goes here...'),
-                        ),
+                        child: MarsOverview(),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 20.0),
