@@ -6,15 +6,7 @@ class MarsOverview extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            child: Image.asset(
-              'assets/images/temp/spacex.png',
-              width: 75.0,
-              height: 18.0,
-            ),
-          ),
-        ],
+        children: <Widget>[],
       ),
     );
   }
