@@ -6,7 +6,13 @@ class MarsOverview extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[Container(child: Text("About Mars"))],
+        children: <Widget>[
+          Container(
+              child: Text(
+            "About Mars",
+            style: TextStyle(fontSize: 10.0, fontWeight: FontWeight.bold),
+          ))
+        ],
       ),
     );
   }
