@@ -55,6 +55,30 @@ class MarsOverview extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Earth & Mars",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "Like Earth, Mars has seasons, polar ice caps, volcanoes, canyons, and weather. It has a very thin atmosphere made of carbon dioxide, nitrogen, and argon.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
