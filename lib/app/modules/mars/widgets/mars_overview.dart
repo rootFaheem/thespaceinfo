@@ -127,6 +127,78 @@ class MarsOverview extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Surface",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "Mars is a terrestrial planet. It is small and rocky. Mars has a thin atmosphere. Mars has an active atmosphere, but the surface of the planet is not active. Its volcanoes are dead.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            child: Text(
+              "Time on Mars",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "One day on Mars lasts 24.6 hours. It is just a little longer than a day on Earth. One year on Mars is 687 Earth days. It is almost twice as long as one year on Earth.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            child: Text(
+              "Mars Neighbors",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "Mars has two moons. Their names are Phobos and Deimos. Mars is the fourth planet from the Sun. That means Earth and Jupiter are Mars’ neighboring planets.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
