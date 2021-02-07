@@ -79,6 +79,30 @@ class MarsOverview extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Water & Mars",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "There are signs of ancient floods on Mars, but now water mostly exists in icy dirt and thin clouds. On some Martian hillsides, there is evidence of liquid salty water in the ground.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
