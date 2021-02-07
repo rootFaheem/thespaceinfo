@@ -103,6 +103,30 @@ class MarsOverview extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Future Plan",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "Scientists want to know if Mars may have had living things in the past. They also want to know if Mars could support life now or in the future.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
