@@ -55,6 +55,30 @@ class MarsFunFact extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Largest dust storms",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "Mars has the largest dust storms in the solar system. They can last for months and cover the entire planet. The seasons are extreme because its elliptical (oval-shaped) orbital path around the Sun is more elongated than most other planets in the solar system.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
