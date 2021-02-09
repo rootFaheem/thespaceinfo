@@ -79,6 +79,30 @@ class MarsPerseveranceRover extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Landing on Mars?",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "The Perseverance rover launched from Earth on July 30, 2020 and will arrive on Mars on February 18, 2021, at around 12:30 PST . Stay tuned!",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
