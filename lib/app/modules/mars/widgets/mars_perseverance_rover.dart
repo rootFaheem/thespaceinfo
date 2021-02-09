@@ -55,6 +55,30 @@ class MarsPerseveranceRover extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Mission Goals",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "The mission will send a rover very similar to Curiosity to explore the rocks, dirt, and air on Mars. Like Curiosity, the Perseverance rover is the size of a small SUV. The new rover has a different goal and different instruments. It will look directly for signs of past life on Mars.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
