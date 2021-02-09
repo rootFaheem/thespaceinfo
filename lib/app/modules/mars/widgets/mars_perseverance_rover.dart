@@ -175,6 +175,30 @@ class MarsPerseveranceRover extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            child: Text(
+              "Landing region",
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 16.0, bottom: 16.0, right: 18.0),
+                color: Color(0xffC4C4C4),
+                child: SizedBox(height: 74.0, width: 4.0),
+              ),
+              Container(
+                width: 310.0,
+                margin: EdgeInsets.only(right: 10.0),
+                child: Text(
+                  "Perseverance will land in a region of Mars called Jezero Crater. This crater is interesting to scientists because it is a very old region of Mars, and it may have once been the site of an ancient river delta. The rocks in this region could tell us about the history of the Red Planet and may have preserved signatures of past life on Mars.",
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
