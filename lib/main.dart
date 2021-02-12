@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './app/modules/vehicles/provider/rocket.dart';
+import './app/modules/mars/provider/mars_rover_image.dart';
 import './app/layout/MyAppBar.dart';
 import './app/modules/company/company.dart';
 import 'app/modules/vehicles/vehicles.dart';
@@ -31,6 +32,7 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: Rocket()),
+        ChangeNotifierProvider.value(value: MarsRoverImage()),
       ],
       child: MaterialApp(
         title: 'TheSpaceInfo',
