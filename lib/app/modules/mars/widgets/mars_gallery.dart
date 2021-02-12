@@ -10,7 +10,7 @@ class MarsGallery extends StatefulWidget {
   _MarsGalleryState createState() => _MarsGalleryState();
 }
 
-var days = [
+List<String> days = [
   'Sunday',
   'Monday',
   'Tuesday',
@@ -18,6 +18,21 @@ var days = [
   'Thursday',
   'Friday',
   'Saturday',
+];
+
+List<String> months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
 ];
 
 class _MarsGalleryState extends State<MarsGallery> {
@@ -60,7 +75,13 @@ class _MarsGalleryState extends State<MarsGallery> {
               OutlineButton.icon(
                   highlightedBorderColor: Theme.of(context).accentColor,
                   icon: Icon(Icons.calendar_today_outlined),
-                  label: Text(days[DateTime.now().weekday].toString()),
+                  label: Text(
+                    months[DateTime.now().month - 1].toString() +
+                        ' ' +
+                        DateTime.now().day.toString() +
+                        ', ' +
+                        DateTime.now().year.toString(),
+                  ),
                   onPressed: () {
                     showDatePicker(
                       context: context,
