@@ -37,11 +37,13 @@ List<String> months = [
 
 class _MarsGalleryState extends State<MarsGallery> {
   bool isLoading;
+  DateTime selectedDate;
 
   @override
   void initState() {
     super.initState();
     isLoading = false;
+    selectedDate = DateTime.now();
   }
 
   @override
@@ -52,6 +54,7 @@ class _MarsGalleryState extends State<MarsGallery> {
         isLoading = false;
       });
     }
+    print(imageData);
 
     Widget _customText(String title, dynamic text) {
       return Column(children: <Widget>[
@@ -76,11 +79,12 @@ class _MarsGalleryState extends State<MarsGallery> {
                   highlightedBorderColor: Theme.of(context).accentColor,
                   icon: Icon(Icons.calendar_today_outlined),
                   label: Text(
-                    months[DateTime.now().month - 1].toString() +
+                    months[DateTime.parse(selectedDate.toString()).month - 1]
+                            .toString() +
                         ' ' +
-                        DateTime.now().day.toString() +
+                        DateTime.parse(selectedDate.toString()).day.toString() +
                         ', ' +
-                        DateTime.now().year.toString(),
+                        DateTime.parse(selectedDate.toString()).year.toString(),
                   ),
                   onPressed: () {
                     showDatePicker(
@@ -92,7 +96,10 @@ class _MarsGalleryState extends State<MarsGallery> {
                       Provider.of<MarsRoverImage>(context, listen: false)
                           .getMarsRoverImages(value);
 
-                      setState(() => isLoading = true);
+                      setState(() => {
+                            selectedDate = value,
+                            isLoading = true,
+                          });
                     });
                   }),
             ],
@@ -100,6 +107,7 @@ class _MarsGalleryState extends State<MarsGallery> {
           Container(
             child: imageData.length <= 0 && isLoading == false
                 ? Container(
+                    margin: EdgeInsets.only(top: 30.0),
                     color: Colors.black,
                     child: Center(
                         child: Text(
