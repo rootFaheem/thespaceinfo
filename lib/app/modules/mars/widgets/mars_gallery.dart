@@ -93,13 +93,15 @@ class _MarsGalleryState extends State<MarsGallery> {
                       firstDate: DateTime(2012, 9, 1),
                       lastDate: DateTime.now(),
                     ).then((value) {
-                      Provider.of<MarsRoverImage>(context, listen: false)
-                          .getMarsRoverImages(value);
+                      if (value != null) {
+                        Provider.of<MarsRoverImage>(context, listen: false)
+                            .getMarsRoverImages(value);
 
-                      setState(() => {
-                            selectedDate = value,
-                            isLoading = true,
-                          });
+                        setState(() => {
+                              selectedDate = value,
+                              isLoading = true,
+                            });
+                      }
                     });
                   }),
             ],
