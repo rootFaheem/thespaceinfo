@@ -110,11 +110,10 @@ class _MarsGalleryState extends State<MarsGallery> {
             child: imageData.length <= 0 && isLoading == false
                 ? Container(
                     margin: EdgeInsets.only(top: 30.0),
-                    color: Colors.black,
+                    color: Theme.of(context).backgroundColor,
                     child: Center(
                         child: Text(
-                      'Please select a date to see images!',
-                      textScaleFactor: 1.1,
+                      'Please select a date to see images...',
                       style: TextStyle(
                         fontStyle: FontStyle.italic,
                         color: Colors.grey[400],
