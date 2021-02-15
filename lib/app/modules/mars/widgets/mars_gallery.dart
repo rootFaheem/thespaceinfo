@@ -54,7 +54,6 @@ class _MarsGalleryState extends State<MarsGallery> {
         isLoading = false;
       });
     }
-    print(imageData);
 
     Widget _customText(String title, dynamic text) {
       return Column(children: <Widget>[
@@ -107,7 +106,10 @@ class _MarsGalleryState extends State<MarsGallery> {
             ],
           ),
           Container(
-            child: imageData.length <= 0 && isLoading == false
+            height: 300.0,
+            child: imageData != null &&
+                    imageData.length <= 0 &&
+                    isLoading == false
                 ? Container(
                     margin: EdgeInsets.only(top: 30.0),
                     color: Theme.of(context).backgroundColor,
@@ -126,6 +128,7 @@ class _MarsGalleryState extends State<MarsGallery> {
                         child: Center(child: CircularProgressIndicator()),
                       )
                     : Container(
+                        height: 200.0,
                         color: Theme.of(context).backgroundColor,
                         child: ListView.builder(
                           itemCount: imageData.length,
