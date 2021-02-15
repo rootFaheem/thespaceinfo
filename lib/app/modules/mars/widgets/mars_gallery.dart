@@ -59,10 +59,7 @@ class _MarsGalleryState extends State<MarsGallery> {
       return Column(children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Text('$title:', textScaleFactor: 1.2),
-            Text('$text', textScaleFactor: 1.2)
-          ],
+          children: <Widget>[Text('$title:'), Text('$text')],
         ),
         SizedBox(height: 5.0)
       ]);
@@ -131,6 +128,7 @@ class _MarsGalleryState extends State<MarsGallery> {
                         height: 200.0,
                         color: Theme.of(context).backgroundColor,
                         child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
                           itemCount: imageData.length,
                           itemBuilder: (ctx, i) => Container(
                             color: Colors.black,
@@ -146,8 +144,11 @@ class _MarsGalleryState extends State<MarsGallery> {
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(30.0)),
                                 child: Card(
-                                  shadowColor: Colors.grey[700],
-                                  color: Colors.black,
+                                  shadowColor: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1
+                                      .color,
+                                  color: Theme.of(context).backgroundColor,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15),
                                   ),
@@ -164,6 +165,7 @@ class _MarsGalleryState extends State<MarsGallery> {
                                           child: Image.network(
                                             imageData[i].imgUrl,
                                             fit: BoxFit.fitWidth,
+                                            height: 80.0,
                                           ),
                                         ),
                                         SizedBox(height: 10.0),
