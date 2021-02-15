@@ -133,11 +133,12 @@ class _MarsGalleryState extends State<MarsGallery> {
                             color: Colors.black,
                             margin: EdgeInsets.all(8.0),
                             child: InkWell(
-                              onTap: () => {}
-                              // Navigator.pushNamed(
-                              //     context, ImageViewer.routeName,
-                              //     arguments: imageData[i].imgUrl)
-                              ,
+                              onTap: () => {
+                                // Navigator.pushNamed(
+                                //     context, ImageViewer.routeName,
+                                //     arguments: imageData[i].imgUrl)
+                                print(imageData[i].imgUrl)
+                              },
                               child: ClipRRect(
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(30.0)),
