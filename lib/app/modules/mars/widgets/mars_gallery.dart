@@ -122,11 +122,11 @@ class _MarsGalleryState extends State<MarsGallery> {
                   )
                 : isLoading == true
                     ? Container(
-                        color: Colors.black,
+                        color: Theme.of(context).backgroundColor,
                         child: Center(child: CircularProgressIndicator()),
                       )
                     : Container(
-                        color: Colors.black,
+                        color: Theme.of(context).backgroundColor,
                         child: ListView.builder(
                           itemCount: imageData.length,
                           itemBuilder: (ctx, i) => Container(
