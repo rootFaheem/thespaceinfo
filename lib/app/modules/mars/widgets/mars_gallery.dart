@@ -131,7 +131,7 @@ class _MarsGalleryState extends State<MarsGallery> {
                           scrollDirection: Axis.horizontal,
                           itemCount: imageData.length,
                           itemBuilder: (ctx, i) => Container(
-                            color: Colors.black,
+                            color: Theme.of(context).backgroundColor,
                             margin: EdgeInsets.all(8.0),
                             child: InkWell(
                               onTap: () => {
@@ -144,10 +144,10 @@ class _MarsGalleryState extends State<MarsGallery> {
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(30.0)),
                                 child: Card(
-                                  shadowColor: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1
-                                      .color,
+                                  // shadowColor: Theme.of(context)
+                                  //     .textTheme
+                                  //     .bodyText1
+                                  //     .color,
                                   color: Theme.of(context).backgroundColor,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15),
