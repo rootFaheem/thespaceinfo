@@ -104,99 +104,98 @@ class _MarsGalleryState extends State<MarsGallery> {
           ),
           Container(
             height: 300.0,
-            child: imageData != null &&
-                    imageData.length <= 0 &&
-                    isLoading == false
-                ? Container(
-                    margin: EdgeInsets.only(top: 30.0),
-                    color: Theme.of(context).backgroundColor,
-                    child: Center(
-                        child: Text(
-                      'Please select a date to see images...',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                        color: Theme.of(context).backgroundColor,
-                      ),
-                    )),
-                  )
-                : isLoading == true
+            child:
+                imageData != null && imageData.length <= 0 && isLoading == false
                     ? Container(
+                        margin: EdgeInsets.only(top: 30.0),
                         color: Theme.of(context).backgroundColor,
-                        child: Center(child: CircularProgressIndicator()),
-                      )
-                    : Container(
-                        height: 200.0,
-                        color: Theme.of(context).backgroundColor,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: imageData.length,
-                          itemBuilder: (ctx, i) => Container(
+                        child: Center(
+                            child: Text(
+                          'Please select a date to see images...',
+                          style: TextStyle(
+                            fontStyle: FontStyle.italic,
                             color: Theme.of(context).backgroundColor,
-                            margin: EdgeInsets.all(8.0),
-                            child: InkWell(
-                              onTap: () => {
-                                // Navigator.pushNamed(
-                                //     context, ImageViewer.routeName,
-                                //     arguments: imageData[i].imgUrl)
-                                print(imageData[i].imgUrl)
-                              },
-                              child: ClipRRect(
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(30.0)),
-                                child: Card(
-                                  // shadowColor: Theme.of(context)
-                                  //     .textTheme
-                                  //     .bodyText1
-                                  //     .color,
-                                  color: Theme.of(context).backgroundColor,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  elevation: 15,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        ClipRRect(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(20.0)),
-                                          child: Image.network(
-                                            imageData[i].imgUrl,
-                                            fit: BoxFit.fitWidth,
-                                            height: 80.0,
-                                          ),
+                          ),
+                        )),
+                      )
+                    : isLoading == true
+                        ? Container(
+                            color: Theme.of(context).backgroundColor,
+                            child: Center(child: CircularProgressIndicator()),
+                          )
+                        : Container(
+                            height: 200.0,
+                            color: Theme.of(context).backgroundColor,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: imageData.length,
+                              itemBuilder: (ctx, i) => Container(
+                                color: Theme.of(context).backgroundColor,
+                                margin: EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () => {
+                                    // Navigator.pushNamed(
+                                    //     context, ImageViewer.routeName,
+                                    //     arguments: imageData[i].imgUrl)
+                                    print(imageData[i].imgUrl)
+                                  },
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(30.0)),
+                                    child: Card(
+                                      // shadowColor: Theme.of(context)
+                                      //     .textTheme
+                                      //     .bodyText1
+                                      //     .color,
+                                      color: Theme.of(context).backgroundColor,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      elevation: 15,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            ClipRRect(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(20.0)),
+                                              child: Image.network(
+                                                imageData[i].imgUrl,
+                                                fit: BoxFit.cover,
+                                                height: 80.0,
+                                              ),
+                                            ),
+                                            SizedBox(height: 10.0),
+                                            // Padding(
+                                            //     padding: EdgeInsets.only(
+                                            //         left: 15.0, right: 15.0),
+                                            //     child: Column(
+                                            //       children: [
+                                            //         _customText('Rover Name',
+                                            //             imageData[i].rover['name']),
+                                            //         _customText(
+                                            //             'Rover Status',
+                                            //             imageData[i]
+                                            //                 .rover['status']),
+                                            //         _customText(
+                                            //             'Camera Used',
+                                            //             imageData[i]
+                                            //                 .camera['name']),
+                                            //         _customText('Earth Date',
+                                            //             imageData[i].earthDate),
+                                            //       ],
+                                            //     ))
+                                          ],
                                         ),
-                                        SizedBox(height: 10.0),
-                                        Padding(
-                                            padding: EdgeInsets.only(
-                                                left: 15.0, right: 15.0),
-                                            child: Column(
-                                              children: [
-                                                _customText('Rover Name',
-                                                    imageData[i].rover['name']),
-                                                _customText(
-                                                    'Rover Status',
-                                                    imageData[i]
-                                                        .rover['status']),
-                                                _customText(
-                                                    'Camera Used',
-                                                    imageData[i]
-                                                        .camera['name']),
-                                                _customText('Earth Date',
-                                                    imageData[i].earthDate),
-                                              ],
-                                            ))
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ),
           ),
         ],
       ),
