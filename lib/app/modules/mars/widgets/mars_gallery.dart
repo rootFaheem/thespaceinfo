@@ -115,7 +115,7 @@ class _MarsGalleryState extends State<MarsGallery> {
                       'Please select a date to see images...',
                       style: TextStyle(
                         fontStyle: FontStyle.italic,
-                        color: Colors.grey[400],
+                        color: Theme.of(context).backgroundColor,
                       ),
                     )),
                   )
