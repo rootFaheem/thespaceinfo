@@ -151,7 +151,7 @@ class _MarsGalleryState extends State<MarsGallery> {
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(15),
                                       ),
-                                      elevation: 15,
+                                      elevation: 1,
                                       child: Padding(
                                         padding: const EdgeInsets.all(5.0),
                                         child: Column(
@@ -163,11 +163,11 @@ class _MarsGalleryState extends State<MarsGallery> {
                                                   Radius.circular(20.0)),
                                               child: Image.network(
                                                 imageData[i].imgUrl,
-                                                fit: BoxFit.cover,
-                                                height: 80.0,
+                                                fit: BoxFit.fitHeight,
+                                                height: 180.0,
                                               ),
                                             ),
-                                            SizedBox(height: 10.0),
+                                            // SizedBox(height: 10.0),
                                             // Padding(
                                             //     padding: EdgeInsets.only(
                                             //         left: 15.0, right: 15.0),
