@@ -158,16 +158,11 @@ class _MarsGalleryState extends State<MarsGallery> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
-                                            // ClipRRect(
-                                            //   borderRadius: BorderRadius.all(
-                                            //       Radius.circular(20.0)),
-                                            //   child:
                                             Image.network(
                                               imageData[i].imgUrl,
                                               fit: BoxFit.fitHeight,
                                               height: 180.0,
                                             ),
-                                            // ),
                                             // SizedBox(height: 10.0),
                                             // Padding(
                                             //     padding: EdgeInsets.only(
