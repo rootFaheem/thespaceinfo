@@ -163,26 +163,6 @@ class _MarsGalleryState extends State<MarsGallery> {
                                               fit: BoxFit.fitHeight,
                                               height: 180.0,
                                             ),
-                                            // SizedBox(height: 10.0),
-                                            // Padding(
-                                            //     padding: EdgeInsets.only(
-                                            //         left: 15.0, right: 15.0),
-                                            //     child: Column(
-                                            //       children: [
-                                            //         _customText('Rover Name',
-                                            //             imageData[i].rover['name']),
-                                            //         _customText(
-                                            //             'Rover Status',
-                                            //             imageData[i]
-                                            //                 .rover['status']),
-                                            //         _customText(
-                                            //             'Camera Used',
-                                            //             imageData[i]
-                                            //                 .camera['name']),
-                                            //         _customText('Earth Date',
-                                            //             imageData[i].earthDate),
-                                            //       ],
-                                            //     ))
                                           ],
                                         ),
                                       ),
