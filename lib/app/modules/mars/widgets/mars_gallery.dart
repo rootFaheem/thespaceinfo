@@ -55,16 +55,6 @@ class _MarsGalleryState extends State<MarsGallery> {
       });
     }
 
-    Widget _customText(String title, dynamic text) {
-      return Column(children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[Text('$title:'), Text('$text')],
-        ),
-        SizedBox(height: 5.0)
-      ]);
-    }
-
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
