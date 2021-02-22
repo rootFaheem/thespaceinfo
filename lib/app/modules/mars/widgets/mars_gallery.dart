@@ -133,10 +133,6 @@ class _MarsGalleryState extends State<MarsGallery> {
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(30.0)),
                                     child: Card(
-                                      // shadowColor: Theme.of(context)
-                                      //     .textTheme
-                                      //     .bodyText1
-                                      //     .color,
                                       color: Theme.of(context).backgroundColor,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(15),
