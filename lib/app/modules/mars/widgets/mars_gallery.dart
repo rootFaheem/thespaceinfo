@@ -126,7 +126,8 @@ class _MarsGalleryState extends State<MarsGallery> {
                                   onTap: () => {print(imageData[i].imgUrl)},
                                   child: ClipRRect(
                                     borderRadius: const BorderRadius.all(
-                                        Radius.circular(30.0)),
+                                      Radius.circular(30.0),
+                                    ),
                                     child: Card(
                                       color: Theme.of(context).backgroundColor,
                                       shape: RoundedRectangleBorder(
