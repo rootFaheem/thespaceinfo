@@ -52,7 +52,6 @@ class _NestedTabBarState extends State<RocketTabsDetails>
             ),
             Container(
               height: screenHeight,
-              // margin: EdgeInsets.only(left: 16.0, right: 16.0),
               child: TabBarView(
                 controller: _nestedTabController,
                 children: <Widget>[
