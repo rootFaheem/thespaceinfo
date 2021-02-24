@@ -71,7 +71,6 @@ class RocketScreen extends StatelessWidget {
                               SizedBox(height: 9.0),
                             ],
                           ),
-
                           subtitle: Column(
                             children: [
                               Container(
@@ -146,7 +145,6 @@ class RocketScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          // trailing: Text('Rockets'),
                         ),
                       ),
                     ),
