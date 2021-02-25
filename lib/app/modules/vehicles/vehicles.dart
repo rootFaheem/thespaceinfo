@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'screens/rocket_screen.dart';
-import 'screens/dragon_screen.dart';
 import 'screens/capsule_screen.dart';
 import 'screens/core_screen.dart';
+import 'screens/dragon_screen.dart';
 import 'screens/payload_screen.dart';
 import 'screens/roadster_screen.dart';
-
+import 'screens/rocket_screen.dart';
 import 'widgets/vehicle_card.dart';
 
 class Vehicles extends StatelessWidget {
