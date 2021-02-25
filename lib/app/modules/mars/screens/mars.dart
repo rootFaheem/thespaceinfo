@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../widgets/mars_overview.dart';
+
 import '../widgets/mars_funfacts.dart';
-import '../widgets/mars_perseverance_rover.dart';
 import '../widgets/mars_gallery.dart';
+import '../widgets/mars_overview.dart';
+import '../widgets/mars_perseverance_rover.dart';
 
 class Mars extends StatefulWidget {
   static const routeName = "mars";
