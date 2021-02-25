@@ -1,10 +1,11 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_options.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../widgets/rocket_tabs_details.dart';
+
 import '../../provider/rocket.dart';
+import '../../widgets/rocket_tabs_details.dart';
 
 class RocketDetailScreen extends StatelessWidget {
   static const routeName = "/rocket-detail";
