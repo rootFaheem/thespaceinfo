@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import './app/modules/vehicles/provider/rocket.dart';
-import './app/modules/mars/provider/mars_rover_image.dart';
-import './app/layout/MyAppBar.dart';
-import './app/modules/company/company.dart';
-import 'app/modules/vehicles/vehicles.dart';
-import 'app/modules/mars/screens/mars.dart';
 import './app/layout//MyAppDrawer.dart';
-import './app/modules/missions/missions.dart';
+import './app/layout/MyAppBar.dart';
 import './app/layout/MyBottomNavigationBar.dart';
-
-import './app/modules/vehicles/screens/rocket_screen.dart';
-import './app/modules/vehicles/screens/dragon_screen.dart';
+import './app/modules/company/company.dart';
+import './app/modules/mars/provider/mars_rover_image.dart';
+import './app/modules/missions/missions.dart';
+import './app/modules/vehicles/provider/rocket.dart';
 import './app/modules/vehicles/screens/capsule_screen.dart';
 import './app/modules/vehicles/screens/core_screen.dart';
+import './app/modules/vehicles/screens/detailed_screens/rocket_detail_screen.dart';
+import './app/modules/vehicles/screens/dragon_screen.dart';
 import './app/modules/vehicles/screens/payload_screen.dart';
 import './app/modules/vehicles/screens/roadster_screen.dart';
-import './app/modules/vehicles/screens/detailed_screens/rocket_detail_screen.dart';
+import './app/modules/vehicles/screens/rocket_screen.dart';
+import 'app/modules/mars/screens/mars.dart';
+import 'app/modules/vehicles/vehicles.dart';
 
 void main() => runApp(MyApp());
 
