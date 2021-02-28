@@ -22,7 +22,7 @@ class RocketScreen extends StatelessWidget {
               return Center(
                 child: Container(
                   color: Colors.black,
-                  child: Text('An error occured ${dataSnapshot.error} '),
+                  child: Text('An error occured ${dataSnapshot.error}'),
                 ),
               );
             } else {
