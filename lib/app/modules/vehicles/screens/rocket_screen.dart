@@ -86,7 +86,7 @@ class RocketScreen extends StatelessWidget {
                                       style: TextStyle(fontSize: 12.0),
                                     ),
                                     Text(
-                                      'Cost per Launch',
+                                      'Cost per Launch ',
                                       style: TextStyle(fontSize: 12.0),
                                     ),
                                   ],
