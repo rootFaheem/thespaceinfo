@@ -81,14 +81,10 @@ class RocketScreen extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    Text(
-                                      'Status',
-                                      style: TextStyle(fontSize: 12.0),
-                                    ),
-                                    Text(
-                                      'Cost per Launch ',
-                                      style: TextStyle(fontSize: 12.0),
-                                    ),
+                                    Text('Status',
+                                        style: TextStyle(fontSize: 12.0)),
+                                    Text('Cost per Launch ',
+                                        style: TextStyle(fontSize: 12.0)),
                                   ],
                                 ),
                               ),
