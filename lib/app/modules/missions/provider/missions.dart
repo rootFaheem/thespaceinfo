@@ -70,7 +70,6 @@ class Mission with ChangeNotifier {
     return _missions.firstWhere((element) => element.id == missionId);
   }
 
-// to get the upcoming missions
   Future<void> getUpcomingMissions() async {
     var url = "https://api.spacexdata.com/v4/launches/upcoming";
 
