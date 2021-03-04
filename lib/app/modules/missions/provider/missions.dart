@@ -116,7 +116,6 @@ class Mission with ChangeNotifier {
     }
   }
 
-  // to get the past missions
   Future<void> getPastMissions() async {
     var url = "https://api.spacexdata.com/v4/launches/past";
     _missions = [];
