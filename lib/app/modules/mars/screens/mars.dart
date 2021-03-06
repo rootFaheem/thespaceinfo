@@ -65,7 +65,6 @@ class _MarsState extends State<Mars> with TickerProviderStateMixin {
               ],
             ),
           ),
-          // MarsDetails(),
           Container(
             color: Theme.of(context).backgroundColor,
             child: Column(
