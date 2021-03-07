@@ -6,7 +6,7 @@ import '../widgets/mars_overview.dart';
 import '../widgets/mars_perseverance_rover.dart';
 
 class Mars extends StatefulWidget {
-  static const routeName = "mars";
+  static const routeName = "route-name";
 
   @override
   _MarsState createState() => _MarsState();
