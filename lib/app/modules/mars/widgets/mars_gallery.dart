@@ -62,8 +62,8 @@ class _MarsGalleryState extends State<MarsGallery> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              OutlineButton.icon(
-                  highlightedBorderColor: Theme.of(context).accentColor,
+              OutlinedButton.icon(
+                  // highlightedBorderColor: Theme.of(context).accentColor,
                   icon: Icon(Icons.calendar_today_outlined),
                   label: Text(
                     months[DateTime.parse(selectedDate.toString()).month - 1]
