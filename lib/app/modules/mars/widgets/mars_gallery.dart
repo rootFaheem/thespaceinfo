@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/mars_rover_image.dart';
-// import '../../shared/widgets/image_viewer.dart';
 
 class MarsGallery extends StatefulWidget {
   static const routeName = "/mars-rover-images";
