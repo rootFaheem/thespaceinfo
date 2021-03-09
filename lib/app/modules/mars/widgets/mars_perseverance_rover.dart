@@ -34,7 +34,10 @@ class MarsPerseveranceRover extends StatelessWidget {
           Container(
             child: Text(
               "Purpose",
-              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Row(
