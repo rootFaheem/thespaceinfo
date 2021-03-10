@@ -91,7 +91,11 @@ class _MarsState extends State<Mars> with TickerProviderStateMixin {
                 ),
                 Container(
                   height: screenHeight * 0.50,
-                  margin: EdgeInsets.only(left: 12.0, right: 12.0, top: 16.0),
+                  margin: EdgeInsets.only(
+                    left: 12.0,
+                    right: 12.0,
+                    top: 16.0,
+                  ),
                   child: TabBarView(
                     controller: _nestedTabController,
                     children: <Widget>[
