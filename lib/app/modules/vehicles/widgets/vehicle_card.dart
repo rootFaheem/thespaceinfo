@@ -27,10 +27,7 @@ class VehicleCard extends StatelessWidget {
                 'assets/images/temp/dragon.png',
                 color: Colors.blue,
               ),
-              title: Image.asset(
-                'assets/images/temp/dragon.png',
-                height: 48.0,
-              ),
+              title: Image.asset('assets/images/temp/dragon.png', height: 48.0),
               // subtitle: ,
             ),
             ListTile(
