@@ -23,10 +23,8 @@ class VehicleCard extends StatelessWidget {
               contentPadding: EdgeInsets.only(
                 top: 10.0,
               ),
-              leading: Image.asset(
-                'assets/images/temp/dragon.png',
-                color: Colors.blue,
-              ),
+              leading: Image.asset('assets/images/temp/dragon.png',
+                  color: Colors.blue),
               title: Image.asset('assets/images/temp/dragon.png', height: 48.0),
               // subtitle: ,
             ),
