@@ -9,7 +9,7 @@ class DragonScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Dragons"),
       ),
-      body: Column(children: <Widget>[Text("Dragons list ")]),
+      body: Column(children: <Widget>[Text("Dragons list")]),
     );
   }
 }
