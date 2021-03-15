@@ -63,7 +63,7 @@ class _NestedTabBarState extends State<RocketTabsDetails>
                       color: Theme.of(context).backgroundColor,
                     ),
                     child: SingleChildScrollView(
-                      child: Text('Overview goes here'),
+                      child: Text('Overview goes here...'),
                     ),
                   ),
                   Container(
