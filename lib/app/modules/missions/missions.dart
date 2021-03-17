@@ -57,7 +57,7 @@ class _NestedTabBarState extends State<MissionScreen>
                       color: Theme.of(context).backgroundColor,
                     ),
                     child: SingleChildScrollView(
-                      child: Text('upcoming goes here...'),
+                      child: Text('upcoming goes here'),
                     ),
                   ),
                   Container(
