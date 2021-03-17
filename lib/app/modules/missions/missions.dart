@@ -67,7 +67,7 @@ class _NestedTabBarState extends State<MissionScreen>
                       borderRadius: BorderRadius.circular(8.0),
                       color: Theme.of(context).backgroundColor,
                     ),
-                    child: Text('recent goes here'),
+                    child: Text('recent goes here..'),
                   ),
                 ],
               ),
