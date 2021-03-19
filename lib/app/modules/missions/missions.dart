@@ -39,8 +39,8 @@ class _NestedTabBarState extends State<MissionScreen>
               unselectedLabelColor: Colors.white70,
               isScrollable: false,
               tabs: <Widget>[
-                Tab(text: "Upcoming"),
-                Tab(text: "Recent"),
+                Tab(text: "Upcoming  Missions"),
+                Tab(text: "Recent Missions"),
               ],
             ),
             Container(
