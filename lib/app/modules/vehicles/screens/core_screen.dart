@@ -9,7 +9,7 @@ class CoreScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Cores"),
       ),
-      body: Column(children: <Widget>[Text("Cores list ")]),
+      body: Column(children: <Widget>[Text("Cores list")]),
     );
   }
 }
