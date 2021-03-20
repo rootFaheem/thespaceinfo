@@ -9,7 +9,7 @@ class PayloadScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Payloads"),
       ),
-      body: Column(children: <Widget>[Text("Payloads list goes here..")]),
+      body: Column(children: <Widget>[Text("Payloads list goes here")]),
     );
   }
 }
